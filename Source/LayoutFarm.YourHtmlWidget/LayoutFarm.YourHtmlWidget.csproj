@@ -9,8 +9,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LayoutFarm.YourHtmlWidget</RootNamespace>
     <AssemblyName>LayoutFarm.YourHtmlWidget</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-	  <LangVersion>8.0</LangVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <LangVersion>8.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>

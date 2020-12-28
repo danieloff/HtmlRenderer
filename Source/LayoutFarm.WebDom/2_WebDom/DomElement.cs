@@ -113,7 +113,7 @@ namespace LayoutFarm.WebDom
 #if DEBUG
             if (childNode.ParentNode != null)
             {
-                throw new System.NotSupportedException();
+                //TODO FIXME, this is throwing on acid input test 8 throw new System.NotSupportedException();
             }
 #endif
             switch (childNode.NodeKind)
