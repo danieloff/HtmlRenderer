@@ -331,12 +331,8 @@
       <Project>{51d63482-5697-4b16-8401-506965624657}</Project>
       <Name>PixelFarm.Drawing</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\PixelFarm\src\PixelFarm\PixelFarm.Typography\PixelFarm.Typography.csproj">
-      <Project>{ec1307c6-309f-43ea-bfcc-5219e2f5a103}</Project>
-      <Name>PixelFarm.Typography</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\PixelFarm\src\PixelFarm\Typography.One\Typography.One.csproj">
-      <Project>{5278fab9-33f0-40e0-adca-7237ea0e935b}</Project>
+    <ProjectReference Include="..\..\..\Typography\Build\NetStandard\Typography.One\Typography.One.csproj">
+      <Project>{29692043-41c3-438b-a48e-c788cab521a4}</Project>
       <Name>Typography.One</Name>
     </ProjectReference>
   </ItemGroup>
