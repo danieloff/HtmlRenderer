@@ -50,10 +50,10 @@ namespace LayoutFarm.HtmlBoxes
         int _rootGlobalY;
         List<HitInfo> _hitInfoList = new List<HitInfo>();
 
-        internal CssBoxHitChain()
+        public CssBoxHitChain()
         {
         }
-        internal void SetRootGlobalPosition(int globalX, int globalY)
+        public void SetRootGlobalPosition(int globalX, int globalY)
         {
 #if DEBUG
             //System.Diagnostics.Debug.WriteLine("hitchain set root global pos:" + globalX + "," + globalY);

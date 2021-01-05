@@ -71,7 +71,7 @@ namespace LayoutFarm.HtmlBoxes
         /// <param name="w"></param>
         /// <param name="h"></param>
         /// <returns></returns>
-        internal bool PushLocalClipArea(float w, float h)
+        public bool PushLocalClipArea(float w, float h)
         {
             _u.CurrentRect = _drawBoard.CurrentClipRect;
             return _drawBoard.PushClipAreaRect((int)w, (int)h, _u);
@@ -88,12 +88,12 @@ namespace LayoutFarm.HtmlBoxes
         {
             _drawBoard.SetClipRect(new Rectangle(left, top, w, h));
         }
-        internal bool PushLocalClipArea(float left, float top, float w, float h)
+        public bool PushLocalClipArea(float left, float top, float w, float h)
         {
             _u.CurrentRect = _drawBoard.CurrentClipRect;
             return _drawBoard.PushClipAreaRect((int)left, (int)top, (int)w, (int)h, _u);
         }
-        internal void PopLocalClipArea()
+        public void PopLocalClipArea()
         {
             //return;
 #if DEBUG

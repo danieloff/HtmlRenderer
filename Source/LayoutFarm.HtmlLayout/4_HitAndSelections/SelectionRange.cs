@@ -19,7 +19,7 @@ namespace LayoutFarm.HtmlBoxes
         CssRun _endHitRun;
         int _endHitRunCharIndex;
 
-        internal SelectionRange(
+        public SelectionRange(
             CssBoxHitChain startChain,
             CssBoxHitChain endChain,
             IHtmlTextService textservice)
@@ -62,7 +62,7 @@ namespace LayoutFarm.HtmlBoxes
         public bool IsValid { get; private set; } = true;
         //
 
-        internal void ClearSelection()
+        public void ClearSelection()
         {
             if (_selectedLines != null)
             {
@@ -84,7 +84,7 @@ namespace LayoutFarm.HtmlBoxes
         }
 
 
-        internal void CopyText(StringBuilder stbuilder)
+        public void CopyText(StringBuilder stbuilder)
         {
             //copy selected text to stbuilder 
             //this version just copy a plain text

@@ -94,7 +94,7 @@ namespace LayoutFarm.HtmlBoxes
             _controller = controller;
         }
         public bool IsReplacement { get; set; }
-        internal bool IsBody { get; set; }
+        public bool IsBody { get; set; }
 
 
         /// <summary>

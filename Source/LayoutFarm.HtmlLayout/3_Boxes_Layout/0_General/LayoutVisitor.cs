@@ -24,11 +24,11 @@ namespace LayoutFarm.HtmlBoxes
         int _episodeId = 1;
 
         IHtmlTextService _txtClient;
-        internal LayoutVisitor(IHtmlTextService txtClient)
+        public LayoutVisitor(IHtmlTextService txtClient)
         {
             _txtClient = txtClient;
         }
-        internal void Bind(HtmlVisualRoot htmlVisualRoot)
+        public void Bind(HtmlVisualRoot htmlVisualRoot)
         {
             _htmlVisualRoot = htmlVisualRoot;
             if (_episodeId == ushort.MaxValue - 1)
@@ -38,7 +38,7 @@ namespace LayoutFarm.HtmlBoxes
                 _episodeId = s_totalLayoutIdEpisode++;
             }
         }
-        internal void UnBind()
+        public void UnBind()
         {
             _htmlVisualRoot = null;
             if (_dicStripPool != null) _dicStripPool.Clear();
