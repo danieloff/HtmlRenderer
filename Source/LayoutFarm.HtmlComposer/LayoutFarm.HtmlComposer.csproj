@@ -38,7 +38,7 @@
     <ProjectReference Include="..\..\..\PixelFarm\src\PixelFarm\PaintLab.Svg\PaintLab.Svg.csproj" />
     <ProjectReference Include="..\..\..\PixelFarm\src\PixelFarm\PaintLab.WebDom\PaintLab.WebDom.csproj" />
     <ProjectReference Include="..\..\..\PixelFarm\src\PixelFarm\PaintLab.WebLexer\PaintLab.WebLexer.csproj" />
-    <ProjectReference Include="..\..\..\PixelFarm\src\PixelFarm\PaintLab.YourImplementation\PaintLab.YourImplementation.csproj" />
+    <ProjectReference Include="..\..\..\PixelFarm\src\PixelFarm\PaintLab.YourImplementationMonoGame\PaintLab.YourImplementationMonoGame.csproj" />
     <ProjectReference Include="..\..\..\PixelFarm\src\PixelFarm\PixelFarm.Drawing\PixelFarm.Drawing.csproj" />
     <ProjectReference Include="..\..\..\routes.goodorbad\PixelFarm.Two.Renderer\PixelFarm.Two.Renderer.csproj" />
     <ProjectReference Include="..\..\..\Typography\Build\NetStandard\Typography.One\Typography.One.csproj" />
