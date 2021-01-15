@@ -104,14 +104,14 @@ namespace LayoutFarm.HtmlBoxes
 
 
                     //
-                    _builtInBackBuffer.IsValid = true;
+                    //DEO TODO CACHEING LATER! _builtInBackBuffer.IsValid = true;
                     _hasAccumRect = false;
 
                     painter.ExitCurrentDrawboardBuffer();//*** switch back
                     painter.SetViewportSize(backupViewportW, backupViewportH);//restore viewport size
                 }
 
-                painter.DrawImage(_builtInBackBuffer.GetImage(), 0, 0, this.Width, this.Height);
+                //DEO TODO CACHEING LATER! painter.DrawImage(_builtInBackBuffer.GetImage(), 0, 0, this.Width, this.Height);
 
                 PaintVisitorStock.ReleaseSharedPaintVisitor(painter);
             }
