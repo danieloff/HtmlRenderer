@@ -74,7 +74,7 @@ namespace LayoutFarm.HtmlBoxes
                     painter.EnterNewDrawboardBuffer(_builtInBackBuffer); //*** switch to builtInBackbuffer 
                     painter.SetViewportSize(this.Width, this.Height);
 
-                    if (!_hasAccumRect)
+                    if (true || !_hasAccumRect) //TODO DEO: Losing some drawing, maybe the rectangles are redrawing but it isn't triggering the text above to redraw! But I haven't figured it out yet. For now redraw all while I work on other parts
                     {
                         _invalidateRect = new Rectangle(0, 0, Width, Height);
                     }
@@ -104,14 +104,14 @@ namespace LayoutFarm.HtmlBoxes
 
 
                     //
-                    //DEO TODO CACHEING LATER! _builtInBackBuffer.IsValid = true;
+                    _builtInBackBuffer.IsValid = true;
                     _hasAccumRect = false;
 
                     painter.ExitCurrentDrawboardBuffer();//*** switch back
                     painter.SetViewportSize(backupViewportW, backupViewportH);//restore viewport size
                 }
 
-                //DEO TODO CACHEING LATER! painter.DrawImage(_builtInBackBuffer.GetImage(), 0, 0, this.Width, this.Height);
+                painter.DrawImage(_builtInBackBuffer.GetImage(), 0, 0, this.Width, this.Height);
 
                 PaintVisitorStock.ReleaseSharedPaintVisitor(painter);
             }
