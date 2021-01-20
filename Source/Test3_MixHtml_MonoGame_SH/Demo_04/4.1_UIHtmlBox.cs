@@ -25,8 +25,8 @@ namespace LayoutFarm
                 contentMx_LoadStyleSheet);
 
             //
-            _htmlBox = new HtmlBox(htmlHost, 1024, 800);
-            _htmlBox.SetLocation(0, 10); //test
+            _htmlBox = new HtmlBox(htmlHost, 1000, 1000);
+            //DEO _htmlBox.SetLocation(0, 10); //test
             host.AddChild(_htmlBox);
             if (_htmltext == null)
             {
