@@ -44,7 +44,7 @@ namespace LayoutFarm.HtmlBoxes
             //TODO: review here,  
             if (_myHtmlVisualRoot == null) { return; }
 
-            bool useBackbuffer = d.IsGpuDrawBoard;
+            bool useBackbuffer = false; //DEO d.IsGpuDrawBoard;
             //useBackbuffer = false;
 
             //... TODO: review here, check doc update here?
@@ -116,7 +116,7 @@ namespace LayoutFarm.HtmlBoxes
                 PaintVisitorStock.ReleaseSharedPaintVisitor(painter);
             }
 #if DEBUG
-            else if (dbugPreferSoftwareRenderer && d.IsGpuDrawBoard)
+            else if (false && dbugPreferSoftwareRenderer && d.IsGpuDrawBoard)
             {
                 //TODO: review this again ***
                 //test built-in 'shared' software rendering surface
