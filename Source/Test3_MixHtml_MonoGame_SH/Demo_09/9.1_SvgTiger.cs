@@ -3,6 +3,7 @@
 using PixelFarm.Drawing;
 using PaintLab.Svg;
 using LayoutFarm.UI;
+using PixelFarm.Drawing.MonoGame;
 
 namespace LayoutFarm
 {
@@ -14,7 +15,7 @@ namespace LayoutFarm
         BackDrawBoardUI _backBoard;
         VgVisualDocHost _vgVisualDocHost;
 
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             _vgVisualDocHost = new VgVisualDocHost();
             _vgVisualDocHost.SetInvalidateDelegate(vgElem =>

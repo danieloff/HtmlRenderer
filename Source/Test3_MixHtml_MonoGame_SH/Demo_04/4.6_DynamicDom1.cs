@@ -2,6 +2,8 @@
 
 using LayoutFarm.CustomWidgets;
 using LayoutFarm.WebDom;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm
 {
     [DemoNote("4.6 dynamic dom1")]
@@ -12,7 +14,7 @@ namespace LayoutFarm
         HtmlBoxes.HtmlHost htmlhost;
         AppHost _host;
         bool testToggle;
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             _host = host;
             this.htmlhost = HtmlHostCreatorHelper.CreateHtmlHost(host, null, null);

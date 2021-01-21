@@ -1,6 +1,8 @@
 ﻿//MIT, 2014-present, WinterDev
 using LayoutFarm.UI;
 using LayoutFarm.WebWidgets;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm.Demo
 {
     [DemoNote("6.2 Demo02_CreateHtmlDomStyle2")]
@@ -9,9 +11,9 @@ namespace LayoutFarm.Demo
         public Demo02_CreateHtmlDomStyle2()
         {
         }
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
-            base.OnStart(host);//setup
+            base.OnStart(host, pcx);//setup
 
             //
             var htmldoc = _groundHtmlDoc;

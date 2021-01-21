@@ -2,12 +2,14 @@
 
 using System.Text;
 using LayoutFarm.CustomWidgets;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm
 {
     [DemoNote("4.4 CssLeanBox")]
     class Demo_CssLeanBox : App
     {
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             ////==================================================
             //html box

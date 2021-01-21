@@ -4,6 +4,7 @@ using PaintLab.Svg;
 using PixelFarm.CpuBlit;
 using PixelFarm.CpuBlit.VertexProcessing;
 using PixelFarm.Drawing;
+using PixelFarm.Drawing.MonoGame;
 
 namespace LayoutFarm
 {
@@ -106,7 +107,7 @@ namespace LayoutFarm
         {
 
         }
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             _appHost = host;//** 
 

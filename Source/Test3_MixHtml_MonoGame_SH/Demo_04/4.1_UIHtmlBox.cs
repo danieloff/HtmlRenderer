@@ -1,5 +1,6 @@
 ﻿//Apache2, 2014-present, WinterDev 
 using LayoutFarm.CustomWidgets;
+using PixelFarm.Drawing.MonoGame;
 
 namespace LayoutFarm
 {
@@ -10,11 +11,13 @@ namespace LayoutFarm
         HtmlBox _htmlBox;
         string _htmltext;
         string _documentRootPath;
+        private IGameHTMLUI _pcx;
         AppHost _host;
 
 
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
+            _pcx = pcx;
             //html box
             _host = host;
             var loadingQueueMx = new LayoutFarm.ContentManagers.ImageLoadingQueueManager();
@@ -63,7 +66,7 @@ namespace LayoutFarm
                 absolutePath = _documentRootPath + "\\" + e.ImagSource;
             }
 
-            if (!System.IO.File.Exists(absolutePath))
+            if (!_pcx.Game.FileExistsAppData(absolutePath)) //!System.IO.File.Exists(absolutePath)) //DEO file paths
             {
                 return;
             }

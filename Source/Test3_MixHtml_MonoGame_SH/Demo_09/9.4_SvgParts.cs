@@ -6,6 +6,7 @@ using PixelFarm.CpuBlit;
 using PixelFarm.CpuBlit.VertexProcessing;
 using PaintLab.Svg;
 using LayoutFarm.UI;
+using PixelFarm.Drawing.MonoGame;
 
 namespace LayoutFarm
 {
@@ -121,7 +122,7 @@ namespace LayoutFarm
 
             return uiSprite;
         }
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             _appHost = host;//** 
             string svgfile = "../Test8_HtmlRenderer.Demo/Samples/Svg/others/volcano3.svg";

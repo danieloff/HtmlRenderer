@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using LayoutFarm.CustomWidgets;
 using LayoutFarm.UI;
 using PaintLab.Svg;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm.ColorBlenderSample
 {
     [DemoNote("9.3 SvgViewer")]
@@ -15,10 +17,10 @@ namespace LayoutFarm.ColorBlenderSample
         ListBox _lstbox_svgFiles;
         BackDrawBoardUI _backBoard;
         VgVisualDocHost _vgDocHost;
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             _host = host;
-            base.OnStart(host);
+            base.OnStart(host, pcx);
 
             _vgDocHost = new VgVisualDocHost();
             _vgDocHost.SetImgRequestDelgate(ImgBinderLoadImg);

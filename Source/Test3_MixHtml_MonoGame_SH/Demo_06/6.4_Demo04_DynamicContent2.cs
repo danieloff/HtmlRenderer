@@ -1,6 +1,8 @@
 ﻿//MIT, 2014-present, WinterDev
 using LayoutFarm.UI;
 using LayoutFarm.WebWidgets;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm.Demo
 {
     [DemoNote("6.4 Demo04_DynamicContent2")]
@@ -9,9 +11,9 @@ namespace LayoutFarm.Demo
         public Demo04_DynamicContent2()
         {
         }
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
-            base.OnStart(host); //setup
+            base.OnStart(host, pcx); //setup
 
             var htmldoc = _groundHtmlDoc;
             var rootNode = htmldoc.RootNode;

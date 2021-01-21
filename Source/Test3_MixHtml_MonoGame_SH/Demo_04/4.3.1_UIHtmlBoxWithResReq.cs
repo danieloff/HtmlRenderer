@@ -2,6 +2,8 @@
 
 using PixelFarm.Drawing;
 using LayoutFarm.CustomWidgets;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm
 {
     [DemoNote("4.3.1 UIHtmlBox with Resource Request1")]
@@ -35,7 +37,7 @@ namespace LayoutFarm
         }
 
         string imgFolderPath = null;
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             string appPath = host.ExecutablePath; //System.Windows.Forms.Application.ExecutablePath;
             int pos = appPath.IndexOf("\\bin\\");

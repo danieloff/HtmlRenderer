@@ -2,6 +2,8 @@
 using LayoutFarm.Composers;
 using LayoutFarm.UI;
 using LayoutFarm.WebWidgets;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm.Demo
 {
     [DemoNote("6.5 Demo05_Dynamic_BoxSpec")]
@@ -10,9 +12,9 @@ namespace LayoutFarm.Demo
         public Demo05_Dynamic_BoxSpec()
         {
         }
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
-            base.OnStart(host); //setup
+            base.OnStart(host, pcx); //setup
 
             WebDom.DomElement rootNode = _groundHtmlDoc.RootNode;
 

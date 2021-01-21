@@ -2,6 +2,8 @@
 
 
 using LayoutFarm.CustomWidgets;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm
 {
     [DemoNote("4.3.2 UIHtmlBox with ContentMx")]
@@ -25,7 +27,7 @@ namespace LayoutFarm
         }
 
 
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             _host = host;
             string appPath = host.ExecutablePath;

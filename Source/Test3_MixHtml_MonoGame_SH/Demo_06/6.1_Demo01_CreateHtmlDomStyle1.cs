@@ -2,6 +2,7 @@
 using LayoutFarm.WebDom;
 using LayoutFarm.UI;
 using LayoutFarm.WebWidgets;
+using PixelFarm.Drawing.MonoGame;
 
 namespace LayoutFarm.Demo
 {
@@ -12,9 +13,9 @@ namespace LayoutFarm.Demo
         public Demo01_CreateHtmlDomStyle1()
         {
         }
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
-            base.OnStart(host);//setup
+            base.OnStart(host, pcx);//setup
             
             var htmldoc = _groundHtmlDoc;
             var rootNode = htmldoc.RootNode;

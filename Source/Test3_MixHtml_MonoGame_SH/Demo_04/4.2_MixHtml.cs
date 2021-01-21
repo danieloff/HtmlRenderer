@@ -1,12 +1,14 @@
 ﻿//Apache2, 2014-present, WinterDev
 
 using LayoutFarm.CustomWidgets;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm
 {
     [DemoNote("4.2 MixHtml and Text")]
     class Demo_MixHtml : App
     {
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             {
                 string html = @"<html><head></head><body><div>OK1</div><div>OK2</div></body></html>";

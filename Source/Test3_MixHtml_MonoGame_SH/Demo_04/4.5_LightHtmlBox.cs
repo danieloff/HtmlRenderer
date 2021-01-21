@@ -5,13 +5,15 @@ using LayoutFarm.UI;
 using LayoutFarm.Composers;
 using LayoutFarm.WebDom.Extension;
 using LayoutFarm.HtmlBoxes;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm
 {
     [DemoNote("4.5 LightHtmlBox")]
     class Demo_LightHtmlBox : App
     {
         HtmlHost htmlHost;
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             htmlHost = HtmlHostCreatorHelper.CreateHtmlHost(host, null, null);
             ////==================================================

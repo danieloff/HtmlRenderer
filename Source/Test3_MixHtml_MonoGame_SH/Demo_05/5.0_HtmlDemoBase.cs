@@ -2,6 +2,8 @@
 
 using LayoutFarm.Composers;
 using LayoutFarm.CustomWidgets;
+using PixelFarm.Drawing.MonoGame;
+
 namespace LayoutFarm.WebWidgets
 {
     abstract class HtmlDemoBase : App
@@ -11,7 +13,7 @@ namespace LayoutFarm.WebWidgets
         protected HtmlBox _groundHtmlBox;
         protected AppHost _host;
         protected HtmlDocument _groundHtmlDoc;
-        protected override void OnStart(AppHost host)
+        protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
             _host = host;
             _imgLoadingQ = new ContentManagers.ImageLoadingQueueManager();
