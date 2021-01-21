@@ -59,11 +59,11 @@ namespace LayoutFarm
             if (e.ImagSource.StartsWith("built_in://imgs/"))
             {
                 //substring
-                absolutePath = _documentRootPath + "\\" + e.ImagSource.Substring("built_in://imgs/".Length);
+                absolutePath = _documentRootPath + "/" + e.ImagSource.Substring("built_in://imgs/".Length);
             }
             else
             {
-                absolutePath = _documentRootPath + "\\" + e.ImagSource;
+                absolutePath = _documentRootPath + "/" + e.ImagSource;
             }
 
             if (!_pcx.Game.FileExistsAppData(absolutePath)) //!System.IO.File.Exists(absolutePath)) //DEO file paths
