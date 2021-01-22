@@ -2,7 +2,7 @@
 
 namespace LayoutFarm.WebWidgets
 {
-    [DemoNote("5.7 ListView")]
+    //[DemoNote("5.7 ListView")]
     class Demo_ListView : HtmlDemoBase
     {
         protected override void OnHtmlHostCreated()

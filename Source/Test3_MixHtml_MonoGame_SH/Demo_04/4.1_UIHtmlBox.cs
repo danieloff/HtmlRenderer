@@ -1,11 +1,15 @@
 ﻿//Apache2, 2014-present, WinterDev 
+using GeonBit.UI;
+using GeonBit.UI.Entities;
 using LayoutFarm.CustomWidgets;
+using LayoutFarm.UI;
 using PixelFarm.Drawing.MonoGame;
+using System;
 
 namespace LayoutFarm
 {
     [DemoNote("4.1 UIHtmlBox")]
-    class Demo_UIHtmlBox : App
+    public class Demo_UIHtmlBox : App
     {
 
         HtmlBox _htmlBox;
@@ -13,7 +17,8 @@ namespace LayoutFarm
         string _documentRootPath;
         private IGameHTMLUI _pcx;
         AppHost _host;
-
+        private GraphicsViewRoot _viewroot;
+        private LayoutFarm.UI.MyWinFormsControl _latest_formCanvas;
 
         protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
@@ -92,5 +97,54 @@ namespace LayoutFarm
             _documentRootPath = System.IO.Path.GetDirectoryName(documentRootPath);
             _htmltext = htmltext;
         }
+
+        public LayoutFarm.UI.MyWinFormsControl GetPanel(IGameHTMLUI pcx)
+        {
+            _pcx = pcx;
+
+            //1. create blank form
+            YourImplementation.DemoFormCreatorHelper.CreateReadyForm(
+                InnerViewportKind.MonoGame,
+                out _viewroot,
+                out _latest_formCanvas,
+                _pcx.UI,
+                _pcx);
+
+            //_userInterface.UseRenderTarget = false;
+            //_userInterface.AddEntity(_latest_formCanvas);
+
+            AppHost appHost = new AppHost(_pcx);
+            AppHostConfig config = new AppHostConfig();
+            YourImplementation.UISurfaceViewportSetupHelper.SetUISurfaceViewportControl(config, _viewroot);
+            appHost.Setup(config);
+
+
+            /*_latest_formCanvas.FormClosed += (s, e) =>
+            {
+                //when owner form is disposed
+                //we should clear our resource?
+                app.OnClosing();
+                app.OnClosed();
+                _latest_formCanvas = null;
+                _viewroot = null;
+            };*/
+
+
+            //2. create app host 
+            appHost.StartApp(this);
+            //_viewroot.TopDownRecalculateContent();
+
+
+
+            //==================================================  
+            if (false) //true) //this.chkShowLayoutInspector.Checked)
+            {
+                ///YourImplementation.LayoutInspectorUtils.ShowFormLayoutInspector(_viewroot);
+            }
+
+
+            return _latest_formCanvas;
+        }
+
     }
 }

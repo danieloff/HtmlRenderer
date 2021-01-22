@@ -2,7 +2,7 @@
 
 namespace LayoutFarm.WebWidgets
 {
-    [DemoNote("5.2 MultpleBox2")]
+    //[DemoNote("5.2 MultpleBox2")]
     class Demo_MultipleBox2 : HtmlDemoBase
     {
         LayoutFarm.HtmlWidgets.ChoiceBox currentSingleCheckedBox;

@@ -5,7 +5,7 @@ using LayoutFarm.Composers;
 using LayoutFarm.WebDom.Extension;
 namespace LayoutFarm.WebWidgets
 {
-    [DemoNote("5.3 DemoTabPage")]
+    //[DemoNote("5.3 DemoTabPage")]
     class DemoTabPage : HtmlDemoBase
     {
         protected override void OnHtmlHostCreated()

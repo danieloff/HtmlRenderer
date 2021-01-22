@@ -2,7 +2,7 @@
 
 namespace LayoutFarm.WebWidgets
 {
-    [DemoNote("5.9 TreeView")]
+    //[DemoNote("5.9 TreeView")]
     class Demo_TreeView : HtmlDemoBase
     {
         protected override void OnHtmlHostCreated()
