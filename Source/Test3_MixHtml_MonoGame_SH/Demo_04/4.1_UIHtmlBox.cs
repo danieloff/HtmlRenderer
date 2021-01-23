@@ -18,7 +18,7 @@ namespace LayoutFarm
         private IGameHTMLUI _pcx;
         AppHost _host;
         private GraphicsViewRoot _viewroot;
-        private LayoutFarm.UI.MyWinFormsControl _latest_formCanvas;
+        private LayoutFarm.UI.HtmlMonoGamePanelControl _latest_formCanvas;
 
         protected override void OnStart(AppHost host, IGameHTMLUI pcx)
         {
@@ -98,7 +98,7 @@ namespace LayoutFarm
             _htmltext = htmltext;
         }
 
-        public LayoutFarm.UI.MyWinFormsControl GetPanel(IGameHTMLUI pcx)
+        public LayoutFarm.UI.HtmlMonoGamePanelControl GetPanel(IGameHTMLUI pcx)
         {
             _pcx = pcx;
 
